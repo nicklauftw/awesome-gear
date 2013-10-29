@@ -1,0 +1,211 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+$gray-bg: #4a565e;
+$gray-border: #acadad;
+$red: #eb0000;
+$white: #fff;
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+body {
+    background: url('../images/bg.png') $gray-bg no-repeat center top;
+}
+
+header {
+    @include gradient-vertical(#fff, #fafafa, 0%, 100%);
+    border-bottom: 1px solid $gray-border;
+    padding: 30px 0;
+    .logo {
+        padding-left: 0;
+    }
+}
+
+// Navigation
+.navbar-nav > li > a {
+    padding: 0 25px;
+    height: 100%;
+    color: #272822;
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    background-color: transparent;
+}
+
+.navbar-nav > li.active > a {
+    color: $red;
+}
+
+.navbar-toggle {
+    margin-top: 0;
+    background-color: $gray-border;
+    span { background-color: $gray; }
+}
+// modules
+main {
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 3px;
+    }
+}
+
+.hero {
+    color: $white;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 40px 0;
+    color: #aaaaaa;
+    font-size: 13px;
+    @include gradient-horizontal(#0f0f0f, #3a3a3a, 0%, 100%);
+    h4 {
+        color: $white;
+    }
+    a {
+        color: #aaaaaa;
+    }
+    a:hover {
+        color: #aaaaaa;
+    }
+    ul {
+        padding: 0 0 0 15px;
+    }
+    li {
+        padding: 3px 0;
+    }
+    .legal-copy {
+        font-size: 11px;
+    }
+}
+
+.tab-area {
+    .nav-tabs > li {
+        width: 16.666667%;
+    }
+
+    .nav-tabs > li.active > a {
+        background: $white;
+    }
+
+    .nav-tabs > li:not(.active) > a {
+        color: $white;
+    }
+
+    .nav-tabs > li > a {
+        @include gradient-vertical(#d89256, #bc7f4b, 0%, 100%);
+        background-color: #bc7f4b;
+        text-align: center;
+        margin-right: 0;
+        border-radius: 0;
+        border-top: none;
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid #d19d71;
+        border-right: 1px solid #a06d40;
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        border-top: none;
+        border-bottom: 1px solid #bc7f4b;
+        border-left: 1px solid #d19d71;
+        border-right: 1px solid #a06d40;
+    }
+
+    .nav-tabs > li:first-child > a {
+        border-left: none;
+        border-top-left-radius: 3px;
+    }
+
+    .nav-tabs > li:last-child > a {
+        border-right: none;
+        border-top-right-radius: 3px;
+    }
+
+    .tab-content {
+        background-color: $white;
+        padding: 30px 0 10px;
+        overflow: auto;
+        font-size: 13px;
+        @include gradient-horizontal($white, #d7d7d7, 0%, 100%);
+        .sidebar {
+            h4 {
+                margin: 0 0 10px;
+                color: #d48f5e;
+            }
+            li:not(:last-child) {
+                padding-bottom: 20px;
+            }
+            li:not(:last-child):after {
+                border: 1px dotted #c3c3c3;
+                height: 1px;
+                width: 94%;
+                content: " ";
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.btn-default {
+    @include gradient-vertical(#d09a49, #b45929, 0%, 100%);
+    background-color: #b45929;
+    border: transparent;
+    border-color: none;
+    border-radius: 15px;
+    color: $white;
+    padding: 10px 20px;
+}
+
+.btn-default:hover, .btn-default:focus {
+    background-color: transparent;
+    border: transparent;
+    color: darken($white, 15%);
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 960px;
+    }
+    .navbar-nav > li:not(:last-child) > a:after {
+        position: absolute;
+        right: 0;
+        top: -10px;
+        height: 40px;
+        width: 1px;
+        border-right: 1px dotted #c9c9c9;
+        content: " ";
+    }
+
+    .navbar-nav > li.active:after {
+        position: absolute;
+        top: 47px;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $red;
+        content: " ";
+    }
+    .hero {
+        height: 500px;
+        padding-top: 150px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar-nav > li > a {
+        padding: 3px 15px;
+    }
+    .hero {
+        height: 350px;
+        padding-top: 50px;
+    }
+}
