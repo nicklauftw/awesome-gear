@@ -54,4 +54,4 @@ require.config({
     }
 });
 
-require(['app', 'bootstrapTab', 'bootstrapCollapse', 'jquery' ], function (tab, $) { });
+require(['app', 'bootstrapTab', 'bootstrapCollapse', 'jquery' ], function ( ) { });

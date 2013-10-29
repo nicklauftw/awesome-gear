@@ -8,6 +8,7 @@ define([], function () {
     });
 
     $('#navbar-toggle').click(function (e) {
+      e.preventDefault()
       $('#navbar-list').collapse('toggle');
     });
 });
