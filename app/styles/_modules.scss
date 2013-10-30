@@ -1,0 +1,127 @@
+// header
+header {
+    @include gradient-vertical(#fff, #fafafa, 0%, 100%);
+    border-bottom: 1px solid $gray-border;
+    padding: 30px 0;
+    .logo {
+        padding-left: 0;
+    }
+}
+
+// Navigation
+.navbar-nav > li > a {
+    padding: 0 25px;
+    height: 100%;
+    color: #272822;
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    background-color: transparent;
+}
+
+.navbar-nav > li.active > a {
+    color: $red;
+}
+
+.navbar-toggle {
+    margin-top: 0;
+    background-color: $gray-border;
+    span { background-color: $gray; }
+}
+
+.hero {
+    color: $white;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 40px 0;
+    color: #aaaaaa;
+    font-size: 13px;
+    @include gradient-horizontal(#0f0f0f, #3a3a3a, 0%, 100%);
+    h4 {
+        color: $white;
+    }
+    a {
+        color: #aaaaaa;
+    }
+    a:hover {
+        color: #aaaaaa;
+    }
+    ul {
+        padding: 0 0 0 15px;
+    }
+    li {
+        padding: 3px 0;
+    }
+    .legal-copy {
+        font-size: 11px;
+    }
+}
+
+.tab-area {
+    .nav-tabs > li {
+        width: 16.666667%;
+    }
+
+    .nav-tabs > li.active > a {
+        background: $white;
+    }
+
+    .nav-tabs > li:not(.active) > a {
+        color: $white;
+    }
+
+    .nav-tabs > li > a {
+        @include gradient-vertical(#d89256, #bc7f4b, 0%, 100%);
+        background-color: #bc7f4b;
+        text-align: center;
+        margin-right: 0;
+        border-radius: 0;
+        border-top: none;
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid #d19d71;
+        border-right: 1px solid #a06d40;
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        border-top: none;
+        border-bottom: 1px solid #bc7f4b;
+        border-left: 1px solid #d19d71;
+        border-right: 1px solid #a06d40;
+    }
+
+    .nav-tabs > li:first-child > a {
+        border-left: none;
+        border-top-left-radius: 3px;
+    }
+
+    .nav-tabs > li:last-child > a {
+        border-right: none;
+        border-top-right-radius: 3px;
+    }
+
+    .tab-content {
+        background-color: $white;
+        padding: 30px 0 10px;
+        overflow: auto;
+        font-size: 13px;
+        @include gradient-horizontal($white, #d7d7d7, 0%, 100%);
+        .sidebar {
+            h4 {
+                margin: 0 0 10px;
+                color: #d48f5e;
+            }
+            li:not(:last-child) {
+                padding-bottom: 20px;
+            }
+            li:not(:last-child):after {
+                border: 1px dotted #c3c3c3;
+                height: 1px;
+                width: 94%;
+                content: " ";
+                margin: 0 auto;
+            }
+        }
+    }
+}
