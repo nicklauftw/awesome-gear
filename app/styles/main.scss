@@ -10,6 +10,7 @@ $white: #fff;
 // Core variables and mixins
 @import "sass-bootstrap/lib/variables";
 @import "sass-bootstrap/lib/mixins";
+@import "sass-bootstrap/lib/forms";
 
 // Reset
 @import "sass-bootstrap/lib/normalize";
@@ -28,14 +29,13 @@ $white: #fff;
 
 // Utility classes
 @import "sass-bootstrap/lib/utilities";
-@import "sass-bootstrap/lib/responsive-utilities";
 
 // Base & Layout
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
-    padding: 0.2em 0;
+    // padding: 0.2em 0;
 }
 
 body {

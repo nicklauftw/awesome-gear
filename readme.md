@@ -1,4 +1,4 @@
-Siteworx Front End Developer Assessment by Nick Lau
+Front End Developer Assessment by Nick Lau
 ======
 
 This assessment used Yeoman webapp generator for scaffolding, which includes Bower for package management and GruntJS for task automation.
